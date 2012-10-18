@@ -1,0 +1,10 @@
+<h1>Pictures I Like . . .</h1>
+<a href='http://localhost:3000/pictures/new'>New Picture</a>
+<ul>
+<% @pics.each do |p| %>
+	<li>
+		<h4>This is: <%= p.title %> </h4>
+		<img src="<%= p.url %>" width="200">
+	</li>
+<% end %>
+</ul>
