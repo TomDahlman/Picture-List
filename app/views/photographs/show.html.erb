@@ -1,6 +1,9 @@
-<h1>One of the Pictures</h1>
+<h3>One of the Pictures . . .</h3>
+<%= link_to "Edit", edit_pic_url %>
+<%= link_to "Delete", one_picture_url(@pic.id), :method => :delete %>
 
 <h4>This is: <%= @pic[:title] %> </h4>
-<!-- <img src="<%= @pic[:url]%>"> -->
 
-<%= link_to image_tag(@pic.url, :width => "180") %> 
+
+<%= image_tag(@pic.url, :width => "180") %> 
+<!-- <img src="<%= @pic[:url]%>"> -->

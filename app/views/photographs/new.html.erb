@@ -1,5 +1,18 @@
-<form action="/pictures" method="post">
+<h3>Please enter your information</h3>
+<%= form_tag all_pictures_url, :method => "post" do %>
+	<%= label_tag :url, "URL:" %>
+	<!-- what is this text_field_tag doing?? -->
+	<%= text_field_tag :url %>
+	
+	<%= label_tag :title, "Title:" %>
+	<%= text_field_tag :title %>
+	
+	<%= submit_tag "Add It!"%>
+	<%= link_to "Nevermind", all_pictures_url %>
+<% end %>
+
+<!-- <form action="/pictures" method="post">
 	URL: <input type="text" name="url">
 	Title: <input type="text" name="title">
   	<input type="submit" name="submit" value="Submit Form"> 	
-</form>
+</form> -->

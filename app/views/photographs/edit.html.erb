@@ -1,0 +1,13 @@
+<h3>Please enter your information</h3>
+
+<%= form_tag one_picture_url, :method => "put" do %>
+	<%= label_tag :url, "URL:" %>
+	<!-- what is this text_field_tag doing?? -->
+	<%= text_field_tag :url, @pic.url %>
+	
+	<%= label_tag :title, "Title:" %>
+	<%= text_field_tag :title, @pic.title %>
+	
+	<%= submit_tag "Change It!"%>
+	<%= link_to "Nevermind", one_picture_url %>
+<% end %>

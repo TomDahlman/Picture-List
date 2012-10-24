@@ -1,10 +1,10 @@
 <h1>Pictures I Like . . .</h1>
-<a href='http://localhost:3000/pictures/new'>New Picture</a>
+<%= link_to "Add A New Picture", new_picture_url %>
 <ul>
 <% @pics.each do |p| %>
 	<li>
 		<h4>This is: <%= p.title %> </h4>
-		<%= link_to image_tag(p.url, :width => "180"), "/pictures/#{p.id}" %> 
+		<%= link_to image_tag(p.url, :width => 180), one_picture_path(p.id) %> 
 	</li>
 <% end %>
 </ul>
