@@ -1,4 +1,6 @@
-<h1>Images from Ireland</h1>
+<h1>One of the Pictures</h1>
 
-<h2>This is: <%= @pic[:title] %> </h2>
-<img src="<%= @pic[:url]%>">
+<h4>This is: <%= @pic[:title] %> </h4>
+<!-- <img src="<%= @pic[:url]%>"> -->
+
+<%= link_to image_tag(@pic.url, :width => "180") %> 

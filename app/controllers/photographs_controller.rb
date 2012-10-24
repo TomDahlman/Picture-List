@@ -4,8 +4,7 @@ class PhotographsController < ApplicationController
   end
   
   def show
-    x = params[:id].to_i
-    @pic = Picture[:id]
+    @pic = Picture.find_by_id(params[:id])
   end
   
   def index

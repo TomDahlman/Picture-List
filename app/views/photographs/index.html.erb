@@ -4,7 +4,7 @@
 <% @pics.each do |p| %>
 	<li>
 		<h4>This is: <%= p.title %> </h4>
-		<img src="<%= p.url %>" width="200">
+		<%= link_to image_tag(p.url, :width => "180"), "/pictures/#{p.id}" %> 
 	</li>
 <% end %>
 </ul>
